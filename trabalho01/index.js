@@ -9,32 +9,17 @@ function jogar(escolha){
 
     computadorEscolha = Math.floor((Math.random() * (3 - 1 + 1))) + 1;
     
-    if ((jogadorEscolha == 1) && (computadorEscolha == 1)){
+    if ((jogadorEscolha == computadorEscolha)){
         ganhador = 0;
     }
-    else if ((jogadorEscolha == 1) && (computadorEscolha == 2)){
+    else if(((jogadorEscolha == 1) && (computadorEscolha == 2)) ||
+    ((jogadorEscolha == 2) && (computadorEscolha == 3)) ||
+    ((jogadorEscolha == 3) && (computadorEscolha == 1))
+    ){
         ganhador = 2;
     }
-    else if ((jogadorEscolha == 1) && (computadorEscolha == 3)){
+    else {
         ganhador = 1;
-    }
-    else if ((jogadorEscolha == 2) && (computadorEscolha == 1)){
-        ganhador = 1;
-    }
-    else if ((jogadorEscolha == 2) && (computadorEscolha == 2)){
-        ganhador = 0;
-    }
-    else if ((jogadorEscolha == 2) && (computadorEscolha == 3)){
-        ganhador = 2;  
-    }
-    else if ((jogadorEscolha == 3) && (computadorEscolha == 1)){
-        ganhador = 2;
-    }
-    else if ((jogadorEscolha == 3) && (computadorEscolha == 2)){
-        ganhador = 1;
-    }
-    else if ((jogadorEscolha == 3) && (computadorEscolha == 3)){
-        ganhador = 0;
     }
 
     function removeSelecionado(prefixoId){
